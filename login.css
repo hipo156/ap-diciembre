@@ -1,96 +1,99 @@
+:root {
+  --primario: #007bff;
+  --secundario: #6c757d;
+  --fondo: #f8f9fa;
+  --boton: #4caf50;
+  --boton-hover: #45a049;
+  --texto: #ffffff;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .container {
-    display: flex;
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px black; 
-    overflow: hidden;
-    width: 95%; 
-    max-width: 900px; 
-    height: 480px; 
-  }
-  
-  .login-section {
-    padding: 40px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .input-field {
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .login-btn {
-    padding: 12px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
-    color: white;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  .login-btn:hover {
-    background-color: #555;
-    transform: scale(1.05);
-  }
-  
-  .create-account {
-    margin-top: 10px;
-    text-align: center;
-    color: #007bff;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-  }
-  
-  .create-account:hover {
-    color: #0056b3;
-  }
-  
-  .image-section {
-    flex: 1;
-   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    padding: 20px; 
-  }
-  
-  .image-section img {
-    width: 90%; 
-    height: auto; 
-    border-radius: 20px; 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); 
-  }
-  
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  background-image: url('./assets/img\ fondo.png'); 
+  background-size: cover;
+  background-position: center;
+}
+
+.main-container {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  height: 60%;
+  width: 40%;
+  border-radius: 25px;
+  background-color: var(--fondo);
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.app-container-title {
+  font-size: 2rem;
+  color: var(--primario);
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form input[type="submit"] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid var(--secundario);
+}
+
+.form input[type="submit"] {
+  background-color: var(--boton);
+  color: var(--texto);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form input[type="submit"]:hover {
+  background-color: var(--boton-hover);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  background-color: var(--boton);
+  color: var(--texto);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 20px 0; /* Añadido margen vertical */
+  transition: background-color 0.3s;
+  align-self: center; /* Centra el botón dentro de su contenedor flexbox */
+}
+
+button:hover {
+  background-color: var(--boton-hover);
+}
